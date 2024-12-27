@@ -1,47 +1,104 @@
-<!DOCTYPE html>
-<html lang="fr">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joyeux Anniversaire, Mon Amour</title>
-  <link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>This one is for my Varchhu</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
 </head>
+
 <body>
-  <div class="container">
-    <h1>Joyeux Anniversaire, Mon Amour ❤️</h1>
-    <p class="message">
-      Aujourd’hui, je veux célébrer la personne incroyable que tu es. Tu rends ma vie meilleure chaque jour, et je suis si chanceux de t’avoir.  
-      Voici une petite surprise rien que pour toi.  
-    </p>
-    <div class="gallery">
-      <img src="images/IMG_7879.JPG" alt="Premier Date" />
-      <img src="images/IMG_9748.JPG" alt="Un souvenir spéciale" />
-      <img src="images/IMG_9463.JPG" alt="Moment précieux" />
-    </div>
-    <div class="music">
-      <h2>Une chanson pour toi :</h2>
-      <iframe src="https://open.spotify.com/embed/track/5wANPM4fQCJwkGd4rN57mH" width="300" height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"></iframe>
-    </div>
-    <button onclick="showSecret()">Clique ici pour voir le message secret</button>
-    <p id="secret-message" style="display: none;">Mon amour,
 
-        En ce jour si spécial, je tiens à te rappeler combien tu illumines ma vie. Depuis que tu es entrée dans mon monde, tout a changé pour le mieux. Tu m’as inspiré à devenir une meilleure version de moi-même, et chaque instant à tes côtés est une bénédiction.
-        
-        Je suis infiniment chanceux de t’avoir dans ma vie. Tu es ma force, mon refuge, et la personne avec qui je rêve de bâtir un avenir, une famille remplie d’amour, de rires et de bonheur.
-        
-        Aujourd’hui, je veux non seulement célébrer ta naissance, mais aussi tout ce que tu es : une femme exceptionnelle, forte et belle, qui mérite tout le succès et tout le bonheur du monde. Sache que je serai toujours là pour te soutenir et t’aimer, dans chaque étape de ta vie.
-        
-        J’espère que cette nouvelle année te réserve tout ce que ton cœur désire, et bien plus encore. Joyeux anniversaire, mon amour. Je t’aime plus que les mots ne pourraient jamais l’exprimer.
-        
-        À nous, à l’avenir, et à tous les rêves que nous réaliserons ensemble ❤️.
-        
-        Avec tout mon cœur,</p>
-  </div>
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">*THE CODE OF LOVE</span><br />
+			<span class="space"/><span class="comments">*/</span><br />
+			Hey Girl !<br />
+			Do you remember the day we first met?<br />
+			<span class="comments">// The ET-LAB Friday. </span><br />
+			Since that day a spark begun;<br />
+			<span class="comments">// Your face Your Voice Your Words.</span><br />
+			Your everything got imprinted in my heart;<br />
+			As the time went on;<br />
+			The Bond grew stronger and stronger;<br />
+			Journey from Infatuation to Love;<br />
+			We have traveled a long way together;<br />
+			There have been fights ;<br />
+			<span class="comments">// And I'm sure there will be more.</span><br />
+			But our Bond will always grow back Stronger;<br />
+			<br>
+			<br>
+			All I want to say is:<br />
+			Baby, I will love you forever;<br />
+			<br>
+			<br>
+			Now If you want to hug me you can touch the heart below<br />
+			<br>
+			<span id="heartspan">
+			<a href="image.jpg"><i class="fas fa-heart" id="icon"></i></a>
+			</span>
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					वर्षा ऋतु FOREVER
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					I LOVE YOU SO MUCH<br/>
+					<div class="signature">- RITVIK</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
-  <script>
-    function showSecret() {
-      document.getElementById('secret-message').style.display = 'block';
-    }
-  </script>
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2024, 1, 12);
+together.setHours(16);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
 </body>
 </html>
